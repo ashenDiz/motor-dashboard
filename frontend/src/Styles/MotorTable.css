@@ -1,0 +1,66 @@
+/* frontend\src\Styles\MotorTable.css */
+
+.table-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status.normal {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.status.low {
+  background-color: #fefcbf;
+  color: #975a16;
+}
+
+.status.moderate {
+  background-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.status.high {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.search-input {
+  width: 250px;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+

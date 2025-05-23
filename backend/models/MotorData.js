@@ -1,8 +1,12 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // Create Schema for Motor Data
 const motorDataSchema = new mongoose.Schema(
   {
+    motorNumber: {
+      type: String,
+      required: true,
+    },
     voltage: {
       type: Number,
       required: true,
@@ -19,13 +23,15 @@ const motorDataSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    category: {
+      type: String,
+    },
   },
   {
-    timestamps: true, // Automatically add createdAt and updatedAt fields
+    timestamps: true,
   }
 );
 
-// Create the MotorData model based on the schema
-const MotorData = mongoose.model('MotorData', motorDataSchema);
+const MotorData = mongoose.model("MotorData", motorDataSchema);
 
 module.exports = MotorData;

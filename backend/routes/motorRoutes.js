@@ -1,8 +1,19 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const { createMotorData } = require('../controllers/motorController');
+const {
+  createMotorData,
+  getAllMotorData,
+  getMotorDataById,
+  updateMotorData,
+  deleteMotorDataById,
+  updateMotorDataById,
+} = require("../controllers/motorController");
 
-// Update route to '/api/motor-data'
-router.post('/motor-data', createMotorData); 
+//routes
+router.post("/create", createMotorData);
+router.get("/getAll", getAllMotorData);
+router.get("/:id", getMotorDataById);
+router.delete("/:id", deleteMotorDataById);
+router.put("/:id", updateMotorDataById);
 
 module.exports = router;

@@ -1,0 +1,46 @@
+.motor-details-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.motor-details-container h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status.normal {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.status.low {
+  background-color: #fefcbf;
+  color: #975a16;
+}
+
+.status.moderate {
+  background-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.status.high {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.motor-details-container ul {
+  list-style: disc inside;
+  margin-top: 5px;
+  padding-left: 15px;
+}

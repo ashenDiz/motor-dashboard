@@ -3,6 +3,8 @@ import axios from "axios";
 import dotenv from "dotenv";
 dotenv.config();
 
+// backend\controllers\motorController.js
+
 const PYTHON_SERVER_URL = process.env.PYTHON_SERVER;
 
 //create motor data
@@ -11,7 +13,7 @@ const createMotorData = async (req, res) => {
     const { voltage, current, temperature, vibration, motorNumber } = req.body;
 
     // Validate input data
-    if (!voltage || !current || !temperature || !vibration) {
+    if (!voltage || !current || !temperature || !vibration || !motorNumber) {
       return res.status(400).json({ message: "All fields are required" });
     }
 

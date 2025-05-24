@@ -7,6 +7,7 @@ import DashboardLayout from './DashboardLayout';
 
 const MotorDashboard = () => {
   const [formData, setFormData] = useState({
+    motorNumber:'',
     voltage: '',
     current: '',
     temperature: '',
@@ -23,9 +24,9 @@ const MotorDashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/motor-data', formData);
+      await axios.post('http://localhost:5000/motor-failures/create', formData);
       alert('Motor data submitted successfully!');
-      setFormData({ voltage: '', current: '', temperature: '', vibration: '' });
+      setFormData({ motorNumber:'',voltage: '', current: '', temperature: '', vibration: '' });
     } catch (error) {
       alert('Error submitting data');
       console.error(error);
@@ -37,6 +38,15 @@ const MotorDashboard = () => {
       <div className='motor-dashboard'>
         <h2>Motor Data Input</h2>
         <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="motorNumber"
+            placeholder="Motor Number"
+            value={formData.motorNumber}
+            onChange={handleChange}
+            required
+          />
+          <br />
           <input
             type="number"
             name="voltage"

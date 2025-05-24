@@ -56,11 +56,19 @@ th {
 }
 
 .search-input {
-  width: 250px;
-  padding: 8px 12px;
-  margin-bottom: 16px;
-  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  width: 100%;
+  max-width: 250px;
   border: 1px solid #ccc;
-  font-size: 14px;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
